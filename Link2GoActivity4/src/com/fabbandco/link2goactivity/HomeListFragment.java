@@ -1,4 +1,4 @@
-package com.example.link2goactivity4;
+package com.fabbandco.link2goactivity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.link2goactivity4.dummy.DummyContent;
+import com.fabbandco.link2goactivity4.dummy.DummyContent;
 
 /**
  * A list fragment representing a list of Home. This fragment also supports

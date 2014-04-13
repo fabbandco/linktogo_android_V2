@@ -1,4 +1,6 @@
-package com.example.link2goactivity4;
+package com.fabbandco.link2goactivity;
+
+import com.example.link2goactivity4.R;
 
 import android.content.Intent;
 import android.os.Bundle;

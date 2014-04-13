@@ -1,4 +1,4 @@
-package com.example.link2goactivity4.dummy;
+package com.fabbandco.link2goactivity4.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

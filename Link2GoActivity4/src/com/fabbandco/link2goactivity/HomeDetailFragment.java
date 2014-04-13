@@ -1,4 +1,4 @@
-package com.example.link2goactivity4;
+package com.fabbandco.link2goactivity;
 
 
 import android.os.Bundle;
@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.link2goactivity4.dummy.DummyContent;
+import com.example.link2goactivity4.R;
+import com.fabbandco.link2goactivity4.dummy.DummyContent;
 
 /**
  * A fragment representing a single Home detail screen. This fragment is either
