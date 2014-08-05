@@ -13,13 +13,13 @@ import android.os.Bundle;
 import android.telephony.SmsMessage;
 import android.widget.Toast;
 
-import com.example.link2goactivity4.R;
 import com.fabbandco.android.application.PersistanceApplication;
 import com.fabbandco.android.async.AddMessageAsync;
 import com.fabbandco.android.model.SmsMessageCrypt;
 import com.fabbandco.android.util.DateUtil;
 import com.fabbandco.android.util.MD5Hash;
 import com.fabbandco.common.Constante;
+import com.fabbandco.link2goactivity.R;
 
 public class SmsReceiver extends BroadcastReceiver 
 {

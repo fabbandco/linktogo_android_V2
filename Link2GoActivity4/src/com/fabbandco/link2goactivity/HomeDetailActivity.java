@@ -6,8 +6,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 
-import com.example.link2goactivity4.R;
-
 /**
  * An activity representing a single Home detail screen. This activity is only
  * used on handset devices. On tablet-size devices, item details are presented
@@ -22,26 +20,11 @@ public class HomeDetailActivity extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_detail);
-		
-
-		// Show the Up button in the action bar.
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
-		// savedInstanceState is non-null when there is fragment state
-		// saved from previous configurations of this activity
-		// (e.g. when rotating the screen from portrait to landscape).
-		// In this case, the fragment will automatically be re-added
-		// to its container so we don't need to manually add it.
-		// For more information, see the Fragments API guide at:
-		//
-		// http://developer.android.com/guide/components/fragments.html
-		//
 		if (savedInstanceState == null) {
-			// Create the detail fragment and add it to the activity
-			// using a fragment transaction.
 			Bundle arguments = new Bundle();
-			arguments.putString(HomeDetailFragment.ARG_ITEM_ID, getIntent()
-					.getStringExtra(HomeDetailFragment.ARG_ITEM_ID));
+			arguments.putString(HomeDetailFragment.ARG_ITEM_ID, getIntent()	.getStringExtra(HomeDetailFragment.ARG_ITEM_ID));
 			HomeDetailFragment fragment = new HomeDetailFragment();
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()

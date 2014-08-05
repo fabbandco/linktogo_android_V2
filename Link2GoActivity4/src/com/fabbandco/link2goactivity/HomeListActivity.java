@@ -4,23 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
-import com.example.link2goactivity4.R;
 
-/**
- * An activity representing a list of Home. This activity has different
- * presentations for handset and tablet-size devices. On handsets, the activity
- * presents a list of items, which when touched, lead to a
- * {@link HomeDetailActivity} representing item details. On tablets, the
- * activity presents the list of items and item details side-by-side using two
- * vertical panes.
- * <p>
- * The activity makes heavy use of fragments. The list of items is a
- * {@link HomeListFragment} and the item details (if present) is a
- * {@link HomeDetailFragment}.
- * <p>
- * This activity also implements the required {@link HomeListFragment.Callbacks}
- * interface to listen for item selections.
- */
 public class HomeListActivity extends FragmentActivity implements
 		HomeListFragment.Callbacks {
 
@@ -58,19 +42,12 @@ public class HomeListActivity extends FragmentActivity implements
 	@Override
 	public void onItemSelected(String id) {
 		if (mTwoPane) {
-			// In two-pane mode, show the detail view in this activity by
-			// adding or replacing the detail fragment using a
-			// fragment transaction.
 			Bundle arguments = new Bundle();
 			arguments.putString(HomeDetailFragment.ARG_ITEM_ID, id);
 			HomeDetailFragment fragment = new HomeDetailFragment();
 			fragment.setArguments(arguments);
-			getSupportFragmentManager().beginTransaction()
-					.replace(R.id.home_detail_container, fragment).commit();
-
+			getSupportFragmentManager().beginTransaction().replace(R.id.home_detail_container, fragment).commit();
 		} else {
-			// In single-pane mode, simply start the detail activity
-			// for the selected item ID.
 			Intent detailIntent = new Intent(this, HomeDetailActivity.class);
 			detailIntent.putExtra(HomeDetailFragment.ARG_ITEM_ID, id);
 			startActivity(detailIntent);

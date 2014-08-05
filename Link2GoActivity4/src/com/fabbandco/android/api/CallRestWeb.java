@@ -20,9 +20,9 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.util.Log;
 
-import com.example.link2goactivity4.R;
 import com.fabbandco.android.application.Link2GoApplication;
 import com.fabbandco.common.Constante;
+import com.fabbandco.link2goactivity.R;
 
 //this class is used for to do the request to the webserver 
 public class CallRestWeb {

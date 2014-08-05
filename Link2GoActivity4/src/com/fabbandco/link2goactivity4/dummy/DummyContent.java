@@ -29,7 +29,7 @@ public class DummyContent {
 	static {
 		// Add 3 sample items.
 		addItem(new DummyItem("1", "Accueil", "Accueil Content", true));
-		addItem(new DummyItem("2", "Configuration","Configuration multiples", false));
+		addItem(new DummyItem("2", "Configuration","Configurations multiples", false));
 		addItem(new DummyItem("3", "Quitter", "Fermer la session", false));
 	}
 

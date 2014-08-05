@@ -1,11 +1,11 @@
 package com.fabbandco.link2goactivity;
 
 
+import java.util.Collection;
+
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.Layout;
-import android.util.LayoutDirection;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.link2goactivity4.R;
 import com.fabbandco.android.model.DummyItem;
+import com.fabbandco.android.model.Message;
 import com.fabbandco.link2goactivity4.dummy.DummyContent;
 
 /**
@@ -76,4 +76,15 @@ public class HomeDetailFragment extends Fragment {
 	}
 	
 	// Méthodes de callBack
+	public void validateMessageSynchronisationCallBackSynchro (final Boolean _isOk){
+		
+	}
+	
+	public void getMessageCallBackSynchro (final Collection<Message> colMessages){
+		
+	}
+	
+	public void updateRegistrationIdCallBackUpdateSynchro (final Boolean _isOk){
+		
+	}
 }
