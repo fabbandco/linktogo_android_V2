@@ -11,11 +11,11 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <uses-permission android:name="android.permission.SEND_SMS"/>
-	<permission android:name="com.fabbandco.android.link2go.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-	<uses-permission android:name="com.fabbandco.android.link2go.permission.C2D_MESSAGE" />
-	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
-    
+	<permission android:name="com.fabbandco.link2goactivity.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+	   
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
@@ -26,6 +26,8 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+       
+        
         <activity
             android:name="com.fabbandco.link2goactivity.HomeListActivity"
             android:label="@string/app_name" >
@@ -49,6 +51,25 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".HomeListActivity" />
         </activity>
-    </application>
+        
+        
+        <receiver
+            android:name="com.fabbandco.android.api.SmsReceiver"
+            android:exported="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver
+            android:name=".GcmBroadcastReceiver"  android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.fabbandco.android.gcm" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".GcmIntentService" />        
+         <meta-data android:name="com.google.android.gms.version"  android:value="3.1.+" />     
+   </application>
 
 </manifest>
