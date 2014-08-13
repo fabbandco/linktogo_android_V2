@@ -32,8 +32,6 @@ public class LoginLink2GoActivity extends Activity{
     	PersistanceApplication.getInstance().setConnecte(true);
     	TextView login = (TextView)findViewById(R.id.login);
     	TextView mdp = (TextView)findViewById(R.id.mdp);
-    	login.setText("fab7887@gmail.com");
-    	mdp.setText("78871705POI");
     	if(!StringUtil.isEmpty(login.getText()+"") && !StringUtil.isEmpty(mdp.getText()+"")){
     		LoginAsync loginAsc = new LoginAsync(this);
     		loginAsc.execute(login.getText()+"",mdp.getText()+"");
