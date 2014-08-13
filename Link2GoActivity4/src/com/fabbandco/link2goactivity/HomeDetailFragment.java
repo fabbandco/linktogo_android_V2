@@ -3,7 +3,6 @@ package com.fabbandco.link2goactivity;
 
 import java.util.Collection;
 
-import android.R;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

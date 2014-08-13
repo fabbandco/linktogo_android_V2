@@ -16,7 +16,6 @@ package com.fabbandco.android.gcm;
  * limitations under the License.
  */
 
-import android.R;
 import android.app.IntentService;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -28,6 +27,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.fabbandco.link2goactivity.HomeListFragment;
+import com.fabbandco.link2goactivity.R;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 

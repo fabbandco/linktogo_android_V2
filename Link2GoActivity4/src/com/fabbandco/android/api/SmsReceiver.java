@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-import android.R;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -20,6 +19,7 @@ import com.fabbandco.android.model.SmsMessageCrypt;
 import com.fabbandco.android.util.DateUtil;
 import com.fabbandco.android.util.MD5Hash;
 import com.fabbandco.common.Constante;
+import com.fabbandco.link2goactivity.R;
 
 public class SmsReceiver extends BroadcastReceiver 
 {
